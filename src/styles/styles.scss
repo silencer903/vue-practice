@@ -1,0 +1,25 @@
+@import "common/common";
+
+$margins:(
+  menu:(
+    bottom: 50px
+  )
+);
+
+@function get-nested($parent, $child, $item){
+  @return map-get(map-get($parent, $child, $item));
+}
+
+*{
+  @include themify($themes){
+    color: themed("fgColor");
+  }
+}
+
+body{
+  @include themifyParent($themes){
+    background-color: themed("bgColor");
+  }
+}
+
+@import "../components/components";

@@ -1,13 +1,7 @@
-<template>
-    $END$
+<template src="./ettn-dialog.html">
+    
 </template>
 
-<script>
-    export default {
-        name: "ettn-dialog"
-    }
+<script src="./ettn-dialog.js">
+
 </script>
-
-<style scoped>
-
-</style>

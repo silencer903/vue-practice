@@ -11,7 +11,9 @@
   "dependencies": {
     "core-js": "^2.6.5",
     "register-service-worker": "^1.6.2",
+    "save": "^2.4.0",
     "vue": "^2.6.10",
+    "vue-i18n": "^8.14.1",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1"
   },
@@ -24,8 +26,11 @@
     "@vue/test-utils": "1.0.0-beta.29",
     "babel-core": "7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
+    "css-loader": "^3.2.0",
+    "node-sass": "^4.12.0",
     "sass": "^1.18.0",
-    "sass-loader": "^7.1.0",
+    "sass-loader": "^7.3.1",
+    "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.10"
   }
 }

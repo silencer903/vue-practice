@@ -1,0 +1,25 @@
+.ettn-side-bar{
+  &.left{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  width: 250px;
+  @include themify($themes){
+    background-color: themed('bgPanel');
+  }
+
+  div[slot="commands"]{
+    height: 25px;
+    &:hover{
+      cursor: pointer;
+      background-color: rgba(0,0,0,0.75);
+    }
+  }
+}
+
+body{
+  margin-left: 250px;
+}

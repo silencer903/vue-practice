@@ -1,10 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div id="app" xmlns:v-on="http://www.w3.org/1999/xhtml">
+    <div id="nav">
+        <router-link to="/">Home</router-link> |
+        <router-link to="/about">About</router-link> |
+        <router-link to="/contact">Contact</router-link>
+    </div>
+    <router-view/>
+    <ettn-nav-bar>
+        <div slot="menu">
+            <ul>
+                <li><router-link to="/about">{{$t("common.nav.about")}}</router-link></li>|
+                <li><router-link to="/contact">{{$t("common.nav.contact")}}</router-link></li>
+            </ul>
+        </div>
+    </ettn-nav-bar>
+
+    <ettn-side-bar>
+        <div slot="sidebar">
+            <div slot="commands">
+                <div v-on:click="openDialogLang()">Language</div>
+                <div v-on:click="openDialogTheme()">Themes</div>
+            </div>
+        </div>
+    </ettn-side-bar>
+
+    <ettn-dialog>
+        <div slot="dialog-id" class="dialogLang">
+            <div slot="dialog-container">
+                <div slot="header-bar">
+                    <div class="cmdClose" v-on:click="closeDialogLang()">X</div>
+                </div>
+                <div slot="content">
+                    <div>
+                        <button class="enBtn" v-on:click="changeLang('en')">{{$t("common.language.en")}}</button>
+                        <button class="seBtn" v-on:click="changeLang('se')">{{$t("common.language.se")}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ettn-dialog>
+
+    <ettn-dialog>
+        <div slot="dialog-id" class="dialogTheme">
+            <div slot="dialog-container">
+                <div slot="header-bar">
+                    <div class="cmdClose" v-on:click="closeDialogTheme()">X</div>
+                </div>
+                <div slot="content">
+                    <div>
+                        <button v-on:click="changeTheme('dark')">{{$t("common.theme.dark")}}</button>
+                        <button v-on:click="changeTheme('light')">{{$t("common.theme.light")}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ettn-dialog>
+</div>

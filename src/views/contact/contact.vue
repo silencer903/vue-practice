@@ -1,13 +1,11 @@
-<template>
-    $END$
+<template src="./contact.html">
+    
 </template>
 
-<script>
-    export default {
-        name: "contact"
-    }
+<script src="./contact.js">
+
 </script>
 
-<style scoped>
+<style lang="scss" src="./_contact.scss">
 
 </style>

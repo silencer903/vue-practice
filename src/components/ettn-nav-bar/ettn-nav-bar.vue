@@ -1,13 +1,3 @@
-<template>
-    $END$
-</template>
+<template src="./ettn-nav-bar.html"></template>
 
-<script>
-    export default {
-        name: "ettn-nav-bar"
-    }
-</script>
-
-<style scoped>
-
-</style>
+<script src="./ettn-nav-bar.js"></script>

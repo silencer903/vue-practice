@@ -1,13 +1,7 @@
-<template>
-    $END$
+<template src="./ettn-side-bar.html">
+    
 </template>
 
-<script>
-    export default {
-        name: "ettn-side-bar"
-    }
+<script src="./ettn-side-bar.js">
+
 </script>
-
-<style scoped>
-
-</style>

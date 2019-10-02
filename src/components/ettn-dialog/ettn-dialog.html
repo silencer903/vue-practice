@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<div class="ettn-dialog">
+    <div class="blur"></div>
+    <slot name="dialog-id">
+        <slot name="dialog-container">
+            <slot name="header-bar"></slot>
+            <slot name="header"></slot>
+            <slot name="content"></slot>
+        </slot>
+    </slot>
+</div>

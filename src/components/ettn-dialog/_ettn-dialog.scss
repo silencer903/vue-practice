@@ -1,0 +1,47 @@
+.ettn-dialog{
+  .blur{
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    //z-index: -1;
+    background-color: rgba(0, 0, 0, 0.75);
+
+    &.show{
+      visibility: visible;
+    }
+  }
+
+  [slot="dialog-container"]{
+    visibility: hidden;
+    position: fixed;
+    top: calc(50% - 250px);
+    left: calc(50% - 250px);
+    width: 500px;
+    height: 500px;
+    border-radius: 3px;
+    box-shadow: 3px 3px 13px 3px;
+
+    @include themify($themes){
+      background-color: themed('bgColor');
+    }
+
+    &.show{
+      visibility: visible;
+    }
+
+    [slot="header-bar"]{
+      div{
+        cursor: pointer;
+      }
+    }
+
+    [slot="content"]{
+      margin: 10px;
+    }
+
+  }
+}
