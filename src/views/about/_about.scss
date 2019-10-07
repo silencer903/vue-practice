@@ -1,0 +1,106 @@
+.about{
+  h1{
+    color: deeppink;
+  }
+
+  img{
+    width: auto;
+    height: 100%;
+  }
+
+  .about-grid{
+    > div{
+      width: 350px;
+      height: 350px;
+      background-color: deeppink;
+      border: 2px solid yellow;
+
+      div{
+        border: 2px solid black;
+        div:first-child{
+          flex-grow: 1;
+        }
+
+        div:last-child{
+          flex-grow: 2;
+        }
+      }
+    }
+
+    .info-box{
+      >div:first-child{
+        margin-top: 10px;
+      }
+
+      >div{
+        padding-top: 20px;
+      }
+    }
+
+    .box-of-doom {
+      display: flex;
+      flex-direction: column;
+
+      .item {
+        flex-grow: 1;
+        width: 50%;
+      }
+
+      .left{
+        align-self: flex-start;
+      }
+
+      .center{
+        align-self: center;
+      }
+
+      .right{
+        align-self: flex-end;
+      }
+
+      .top{
+
+      }
+
+      .center2{
+        flex-grow: 2;
+      }
+
+      .bottom{
+        flex-grow: 1;
+      }
+    }
+  }
+
+  .ettn-grid{
+    display: flex;
+
+    &.row{
+      flex-direction: row;
+
+      &.center{
+        justify-content: center;
+      }
+
+      &.space-around{
+        justify-content: space-around;
+      }
+    }
+
+    &.column{
+      flex-direction: column;
+
+      &.center{
+        justify-content: center;
+      }
+
+      &.start{
+        justify-content: flex-start;
+      }
+
+      &.end{
+        justify-content: flex-end;
+      }
+    }
+  }
+}
