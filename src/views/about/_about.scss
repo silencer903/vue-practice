@@ -9,37 +9,62 @@
   }
 
   .about-grid{
-    > div{
+
+
+    .box{
       width: 350px;
       height: 350px;
-      background-color: deeppink;
-      border: 2px solid yellow;
+    }
 
-      div{
-        border: 2px solid black;
-        div:first-child{
-          flex-grow: 1;
-        }
-
-        div:last-child{
-          flex-grow: 2;
-        }
+    .img-box{
+      img{
+        width: auto;
+        height: 100%
       }
     }
 
     .info-box{
-      >div:first-child{
-        margin-top: 10px;
+
+      @include themify($themes){
+        background-color: themed("bgPanel");
+        box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.75);
       }
 
       >div{
-        padding-top: 20px;
+
+        margin: 0 10px;
+
+        >div:first-child{
+          margin-top: 10px;
+        }
+
+        >div{
+          padding-top: 20px;
+
+          div{
+            text-align: left;
+            width: 100px;
+          }
+
+          div:first-child{
+            flex-grow: 1;
+          }
+
+          div:last-child{
+            flex-grow: 2;
+          }
+        }
       }
+
     }
 
     .box-of-doom {
       display: flex;
       flex-direction: column;
+
+      .content{
+        margin: 0 40px;
+      }
 
       .item {
         flex-grow: 1;
@@ -69,6 +94,8 @@
       .bottom{
         flex-grow: 1;
       }
+
+
     }
   }
 
