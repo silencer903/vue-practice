@@ -1,6 +1,39 @@
 .home{
   margin-top: 50px;
+
   .header{
     padding-bottom: 50px;
+  }
+
+  .video-container{
+
+    background-color: rgba(0, 0, 0, 0.75);
+    border-radius: 3px;
+
+    .video-player{
+
+    }
+
+    .player-controls{
+      height: 50px;
+      border-radius: 3px;
+      box-shadow: 1px 1px 1px 1px black;
+      background-color: rgba(0, 0, 0, 0.40);
+
+      .group{
+        height: 50px;
+        position: relative;
+        margin-right: 20px;
+        i{
+          position: absolute;
+          visibility: hidden;
+
+          &.show{
+            visibility: visible;
+          }
+        }
+      }
+    }
+
   }
 }
