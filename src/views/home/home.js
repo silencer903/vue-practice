@@ -8,6 +8,9 @@ export default {
     },
     mounted(){
         let videoPlayer = document.querySelector(".video-container .video-player video");
+        this.seekControl = document.querySelector(".video-container .player-controls .seek-controls .seek-slider");
+        this.seekControl.setAttribute("min",0);
+        this.seekControl.value = 0;
         this.playControls = {
             play: document.querySelector(".video-container .player-controls .play-controls .play"),
             pause: document.querySelector(".video-container .player-controls .play-controls .pause"),
@@ -33,6 +36,7 @@ export default {
             }
         });
         document.querySelector(".video-container .player-controls .volume-controls").addEventListener("click", () => {
+            this.seekControl.setAttribute("max", videoPlayer.duration);
             videoPlayer.muted = !videoPlayer.muted;
             if(videoPlayer.muted){
                 this.showVolumeHigh();
@@ -40,7 +44,21 @@ export default {
                 this.showVolumeOff();
             }
         });
+        document.querySelector(".video-container .player-controls .volume-slider-control .volume-slider").addEventListener("input", (e) => {
+            videoPlayer.volume = e.target.value /100;
+        });
+        this.seekControl.addEventListener("input", (e) => {
+            videoPlayer.pause();
+            videoPlayer.currentTime = this.seekControl.value;
+        });
 
+        this.seekControl.addEventListener("change", (e) => {
+            videoPlayer.play();
+        });
+
+        videoPlayer.addEventListener("timeupdate", (e) => {
+            this.seekControl.value = videoPlayer.currentTime;
+        })
     },
     methods:{
         showPlayCmd(){
@@ -58,6 +76,11 @@ export default {
         showVolumeOff(){
             this.volumeControls.mute.classList.add("show");
             this.volumeControls.high.classList.remove("show");
+        },
+        slider(input){
+            //let res = Math.round(input * 10)/10;
+            let res = input / 100;
+
         }
     }
 };

@@ -21,7 +21,6 @@
       background-color: rgba(0, 0, 0, 0.40);
 
       .group{
-        height: 50px;
         position: relative;
         margin-right: 20px;
         i{
@@ -32,8 +31,18 @@
             visibility: visible;
           }
         }
+        .volume-slider{
+          appearance: none;
+          background-color: yellow;
+          &::-webkit-slider-thumb{
+            appearance: none;
+            width: 25px;
+            height: 25px;
+            background-color: deeppink;
+          }
+        }
+
       }
     }
-
   }
 }

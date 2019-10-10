@@ -1,0 +1,30 @@
+.ettn-grid {
+    display: flex;
+
+    &.row {
+        flex-direction: row;
+
+        &.center {
+            justify-content: center;
+        }
+
+        &.space-around {
+            justify-content: space-around;
+        }
+    }
+    &.column {
+        flex-direction: column;
+
+        &.center {
+            justify-content: center;
+        }
+
+        &.start {
+            justify-content: flex-start
+        }
+
+        &.end {
+            justify-content: flex-end;
+        }
+    }
+}
