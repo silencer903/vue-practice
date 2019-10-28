@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/home/Home.vue'
 import Contact from './views/contact/contact.vue'
+import Skills from './components/skills/skills.vue'
 
 Vue.use(Router);
 
@@ -26,6 +27,11 @@ export default new Router({
           path: '/contact',
           name: 'contact',
           component: Contact
+      },
+      {
+          path: '/skills',
+          name: 'skills',
+          component: Skills
       }
   ]
 })
