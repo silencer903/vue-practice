@@ -1,0 +1,20 @@
+<div class="skills">
+    <h1>Skills</h1>
+
+    <ul>
+        <li v-for="item of skills">
+            <router-link v-bind:to="{
+                name:'skills-details',
+                params:{
+                    id: item.id.$oid
+                }
+            }">
+                <div class="card">
+                    <div class="image"><img v-bind:src="item.image" alt=""></div>
+                    <div class="content">{{item.name}}</div>
+                </div>
+            </router-link>
+
+        </li>
+    </ul>
+</div>

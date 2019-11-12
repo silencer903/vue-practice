@@ -2,8 +2,8 @@ import http from "axios"
 
 export default {
     name: "skills",
-    data:{
-        return :{
+    data:function (){
+        return {
             skills:{}
         }
     },

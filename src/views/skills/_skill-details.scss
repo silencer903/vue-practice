@@ -1,0 +1,16 @@
+.skill-details{
+  .container{
+    .img{
+      @include themify($themes){
+        background-color: themed('bgPanel');
+      }
+    }
+    .content{
+      padding: 10px;
+      @include themify($themes){
+        background-color: themed('bgPanel');
+      }
+    }
+  }
+
+}
