@@ -8,7 +8,14 @@
             </div>
             <div class="content">
                 <h2>{{this.skills[0].name}}</h2>
-                {{this.skills[0].description}}
+                <p>
+                    {{this.skills[0].description}}
+                </p>
+                <div class="rating">
+                    <ul>
+
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -22,8 +29,26 @@
                 skills:{}
             }
         },
-        mounted() {
-            http.get('http://localhost:8080/skills.json').then(response => { console.log(response); this.skills = response.data.filter(q=>q.id.$oid == this.$route.params.id);});
+        created: function() {
+            http.get('http://localhost:8080/skills.json').then(response => { this.skills = response.data.filter(q=>q.id.$oid == this.$route.params.id);});
+        },
+        updated() {
+            let ratingElement = document.querySelector('.skill-details .rating ul');
+
+            for (let i = 0; i < 5; i++){
+                let litag = document.createElement('li');
+                let itag = document.createElement('i');
+                if (this.skills[0].rating > i){
+                    itag.classList.add('icon');
+                    itag.classList.add('ion-md-heart');
+                }else{
+                    itag.classList.add('icon');
+                    itag.classList.add('ion-md-heart-empty');
+                }
+
+                litag.appendChild(itag);
+                ratingElement.appendChild(litag);
+            }
         }
     }
 </script>
