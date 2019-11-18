@@ -23,6 +23,7 @@ const en = {
             location: "Address",
             about: "About",
             contact: "Contact",
+            skills: "Skills",
             contactSent: "Contact/sent",
             checkout: "Checkout",
             checkoutCompleted: "Checkout/completed",

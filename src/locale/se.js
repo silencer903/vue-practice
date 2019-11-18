@@ -22,6 +22,7 @@ const se = {
         nav: {
             location: "Adress",
             about: "Om",
+            skills: "Kompetens",
             contact: "Kontakt",
             contactSent: "Kontakt/skickat",
             checkout: "Kassa",

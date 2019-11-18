@@ -16,10 +16,10 @@
     </ettn-nav-bar>
 
     <ettn-side-bar>
-        <div slot="sidebar">
+        <div slot="sidebar" class="left">
             <div slot="commands">
-                <div v-on:click="openDialogLang()">Language</div>
-                <div v-on:click="openDialogTheme()">Themes</div>
+                <button v-on:click="openDialogLang()">Language</button>
+                <button v-on:click="openDialogTheme()">Themes</button>
             </div>
         </div>
     </ettn-side-bar>
